@@ -1,0 +1,24 @@
+PODS:
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
+  - VK-ios-sdk (1.4.6)
+
+DEPENDENCIES:
+  - R.swift
+  - VK-ios-sdk
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - R.swift
+    - R.swift.Library
+    - VK-ios-sdk
+
+SPEC CHECKSUMS:
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
+
+PODFILE CHECKSUM: 11134901cdc28f56fd7f67a174eef71b995e40cf
+
+COCOAPODS: 1.5.0
