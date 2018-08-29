@@ -1,6 +1,0 @@
-framework module Pods_VK_FilterTests {
-  umbrella header "Pods-VK FilterTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

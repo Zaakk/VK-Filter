@@ -18,7 +18,8 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
 
         VKSdk.initialize(withAppId: kAppId).register(self)
-        
+        VKSdk.instance().uiDelegate = self
+        VKSdk.instance().register(self)
         VKSdk.wakeUpSession(kPermissionScope) { (state, error) in
             guard error == nil, state != VKAuthorizationState.error else {
                 dLog(message: error?.localizedDescription)
@@ -66,6 +67,14 @@ extension NavigationController:VKSdkDelegate {
     func vkSdkUserAuthorizationFailed() {
         
     }
+}
+
+extension NavigationController:VKSdkUIDelegate {
+    func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
+        
+    }
     
-    
+    func vkSdkShouldPresent(_ controller: UIViewController!) {
+        self.present(controller, animated: true, completion: nil)
+    }
 }
