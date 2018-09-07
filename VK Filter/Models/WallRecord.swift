@@ -8,36 +8,50 @@
 
 import UIKit
 
+class WallRecord: Codable {
+    let id:Int
+    let ownerId:Int
+    let fromId:Int
+    let createdBy:Int?
+    let date:Date
+    let text:String
+    let replyOwnerId:Int?
+    let replyPostId:Int?
+    let friendsOnly:Bool?
+    let likes:Likes?
+    let reposts:Reposts?
+    let postType:PostType
+    let postSource:PostSource
+    let copyHistory:WallRecord?
+    let canDelete:Bool
+    let canPin:Bool
+    
+    enum CodingKeys:String, CodingKey {
+        case id
+        case ownerId = "owner_id"
+        case fromId = "from_id"
+        case createdBy = "created_by"
+        case date
+        case postType = "post_type"
+        case postSource = "post_source"
+        case text
+        case replyOwnerId = "reply_owner_id"
+        case replyPostId = "reply_post_id"
+        case friendsOnly = "friends_only"
+        case likes
+        case reposts
+        case copyHistory = "copy_history"
+        case canDelete = "can_delete"
+        case canPin = "can_pin"
+    }
+}
+
 enum PostType:String, Codable {
     case post
     case copy
     case reply
     case postpone
     case suggest
-}
-
-struct Likes:Codable {
-    let count:Int
-    let userLikes:Bool
-    let canLike:Bool
-    let canPublish:Bool
-    
-    enum CodingKeys:String, CodingKey {
-        case count
-        case userLikes = "user_like"
-        case canLike = "can_like"
-        case canPublish = "can_publish"
-    }
-}
-
-struct Reposts:Codable {
-    let count:Int
-    let userReposted:Bool
-    
-    enum CodingKeys:String, CodingKey {
-        case count
-        case userReposted = "user_reposted"
-    }
 }
 
 enum AttachmentType:String, Codable {
@@ -68,95 +82,32 @@ enum AttachmentType:String, Codable {
     }
 }
 
-struct VideoAttachment:Codable {
-    let id:Int
-    let ownerId:Int
-    let title:String
-    let description:String
-    let duration:Int
-    let photo130:Int
-    let photo320:Int
-    let photo640:Int
-    let photo800:Int
-    let date:TimeInterval
-    let addingDate:TimeInterval
-    let views:Int
-    let comments:Int
-    let player:URL
-    let platform:String
-    let canEdit:Bool?
-    let canAdd:Bool?
-    let isPrivate:Bool?
-    let accessKey:String
-    let processing:Bool?
-    let live:Bool?
-    let upcoming:Bool?
-    
-    enum CodingKeys:String, CodingKey {
-        case id, title, description, duration, date, views, comments, player, platform, processing, live, upcoming
-        case ownerId = "owner_id"
-        case photo130 = "photo_130"
-        case photo320 = "photo_320"
-        case photo640 = "photo_640"
-        case photo800 = "photo_800"
-        case addingDate = "adding_date"
-        case canEdit = "can_edit"
-        case canAdd = "can_add"
-        case isPrivate = "is_private"
-        case accessKey = "access_key"
-    }
-}
-
-struct AudioAttachment:Codable {
-    let id:Int
-    let ownerId:Int
-    let artist:String
-    let title:String
-    let duration:Int
-    let url:URL
-    let lyricsId:Int
-    let albumId:Int
-    let genreId:Int
-    let date:TimeInterval
-    let noSearch:Bool?
-    let isHq:Bool
-    
-    enum CodingKeys:String, CodingKey {
-        case id, artist, title, duration, url, date
-        case ownerId = "owner_id"
-        case lyricsId = "lyrics_id"
-        case albumId = "album_id"
-        case genreId = "genre_id"
-        case noSearch = "no_search"
-        case isHq = "is_hq"
-    }
-}
-
 struct Attachment:Codable {
     let type:AttachmentType
     
 }
 
-class WallRecord: Codable {
-    let id:Int
-    let fromId:Int
-    let ownerId:Int
-    let date:Date
-    let postType:PostType //TODO: replace with enum
-    let text:String
-    let copyHistory:WallRecord?
-    let canDelete:Bool
-    let canPin:Bool
+enum Platform:String, Codable {
+    case android
+    case iphone
+    case wphone
+}
+
+enum WallRecordSourceType:String, Codable {
+    case vk, widget, api, rss, sms
+}
+
+struct PostSourceData:Codable {
+    let activity:String?
+    let photo:Photo?
+    let widget:String?
+    let like:String?
+    let poll:String?
+    let url:URL?
+}
+
+struct PostSource:Codable {
+    let type:WallRecordSourceType
+    let platform:Platform
     
-    enum CodingKeys:String, CodingKey {
-        case id
-        case fromId = "from_id"
-        case ownerId = "owner_id"
-        case date
-        case postType = "post_type"
-        case text
-        case copyHistory = "copy_history"
-        case canDelete = "can_delete"
-        case canPin = "can_pin"
-    }
 }

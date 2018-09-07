@@ -20,6 +20,14 @@
 		BCA63138211A310600AB15C5 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA63137211A310600AB15C5 /* R.generated.swift */; };
 		BCA6313D211B786A00AB15C5 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6313C211B786A00AB15C5 /* NavigationController.swift */; };
 		BCA6313F211B789600AB15C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6313E211B789600AB15C5 /* LoginViewController.swift */; };
+		BCC6963E214327520077AA32 /* AudioAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6963D214327520077AA32 /* AudioAttachment.swift */; };
+		BCC69640214327780077AA32 /* VideoAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6963F214327780077AA32 /* VideoAttachment.swift */; };
+		BCC696422143279D0077AA32 /* Likes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC696412143279D0077AA32 /* Likes.swift */; };
+		BCC69644214327B80077AA32 /* Reposts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC69643214327B80077AA32 /* Reposts.swift */; };
+		BCC69646214327D90077AA32 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC69645214327D90077AA32 /* Photo.swift */; };
+		BCC69648214327F60077AA32 /* Graffiti.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC69647214327F60077AA32 /* Graffiti.swift */; };
+		BCC6964A214328BA0077AA32 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC69649214328BA0077AA32 /* Documents.swift */; };
+		BCC6964C214328FE0077AA32 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC6964B214328FE0077AA32 /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,14 @@
 		BCA63137211A310600AB15C5 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		BCA6313C211B786A00AB15C5 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		BCA6313E211B789600AB15C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCC6963D214327520077AA32 /* AudioAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAttachment.swift; sourceTree = "<group>"; };
+		BCC6963F214327780077AA32 /* VideoAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAttachment.swift; sourceTree = "<group>"; };
+		BCC696412143279D0077AA32 /* Likes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Likes.swift; sourceTree = "<group>"; };
+		BCC69643214327B80077AA32 /* Reposts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reposts.swift; sourceTree = "<group>"; };
+		BCC69645214327D90077AA32 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BCC69647214327F60077AA32 /* Graffiti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graffiti.swift; sourceTree = "<group>"; };
+		BCC69649214328BA0077AA32 /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
+		BCC6964B214328FE0077AA32 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,14 @@
 			isa = PBXGroup;
 			children = (
 				BC4A929F211CD37A00500D16 /* WallRecord.swift */,
+				BCC6963D214327520077AA32 /* AudioAttachment.swift */,
+				BCC6963F214327780077AA32 /* VideoAttachment.swift */,
+				BCC696412143279D0077AA32 /* Likes.swift */,
+				BCC69643214327B80077AA32 /* Reposts.swift */,
+				BCC69645214327D90077AA32 /* Photo.swift */,
+				BCC69647214327F60077AA32 /* Graffiti.swift */,
+				BCC69649214328BA0077AA32 /* Documents.swift */,
+				BCC6964B214328FE0077AA32 /* Audio.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,10 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC69646214327D90077AA32 /* Photo.swift in Sources */,
 				BCA6313F211B789600AB15C5 /* LoginViewController.swift in Sources */,
 				BCA63132211A11FD00AB15C5 /* Macroses.swift in Sources */,
 				BCA631122119E16800AB15C5 /* MainViewController.swift in Sources */,
+				BCC6963E214327520077AA32 /* AudioAttachment.swift in Sources */,
+				BCC69648214327F60077AA32 /* Graffiti.swift in Sources */,
+				BCC696422143279D0077AA32 /* Likes.swift in Sources */,
+				BCC69644214327B80077AA32 /* Reposts.swift in Sources */,
+				BCC6964A214328BA0077AA32 /* Documents.swift in Sources */,
+				BCC6964C214328FE0077AA32 /* Audio.swift in Sources */,
 				BC4A92A0211CD37A00500D16 /* WallRecord.swift in Sources */,
+				BCC69640214327780077AA32 /* VideoAttachment.swift in Sources */,
 				BCA6313D211B786A00AB15C5 /* NavigationController.swift in Sources */,
 				BCA631102119E16800AB15C5 /* AppDelegate.swift in Sources */,
 				BCA63138211A310600AB15C5 /* R.generated.swift in Sources */,
